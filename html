@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurodiversidade - Compreendendo a Mente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* === CSS Moderno e Profissional === */
+        :root {
+            --primary: #6c5ce7;
+            --primary-dark: #5849c2;
+            --secondary: #00cec9;
+            --accent: #fd79a8;
+            --dark: #2d3436;
+            --light: #dfe6e9;
+            --white: #ffffff;
+            --shadow: 0 10px 40px rgba(0,0,0,0.1);
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #f8f9fa 0%, #e8ecf1 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        /* Header com gradiente */
+        header {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 3rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Container principal */
+        main {
+            max-width: 900px;
+            margin: -30px auto 2rem;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Seção de introdução */
+        .intro {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .intro p {
+            color: #636e72;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Botões de navegação */
+        .menu-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .menu-buttons button {
+            background: var(--white);
+            color: var(--dark);
+            border: 2px solid var(--light);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .menu-buttons button:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(108, 92, 231, 0.3);
+        }
+
+        .menu-buttons button.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* Área de conteúdo */
+        #content-area {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            min-height: 300px;
+            animation: fadeIn 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #content-area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #content-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light);
+        }
+
+        #content-text {
+            color: #4a5568;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #636e72;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .menu-buttons button { padding: 12px 20px; font-size: 0.9rem; }
+            #content-area { padding: 1.5rem; }
+            #content-title { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌈 Neurodiversidade</h1>
+        <p>Compreendendo as diferentes formas de pensar e processar o mundo</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>O que é Neurodivergência?</h2>
+            <p>
+                Neurodivergência refere-se às variações naturais no desenvolvimento neurológico humano. 
+                Inclui condições como Autismo, TDAH, Dislexia e Discalculia. Estas não são "doenças" 
+                a serem curadas, mas sim diferenças que trazem tanto desafios quanto pontos fortes únicos. 
+                A neurodiversidade reconhece que cerebros diferentes pensam diferente — e isso é uma 
+                força, não uma fraqueza.
+            </p>
+        </section>
+
+        <div class="menu-buttons">
+            <button onclick="mostrarInfo('tdah')">TDAH</button>
+            <button onclick="mostrarInfo('autismo')">Autismo</button>
+            <button onclick="mostrarInfo('dislexia')">Dislexia</button>
+            <button onclick="mostrarInfo('discalculia')">Discalculia</button>
+            <button onclick="mostrarInfo('spd')">TPS</button>
+        </div>
+
+        <div id="content-area">
+            <h3 id="content-title">Bem-vindo(a)!</h3>
+            <p id="content-text">Clique nos botões acima para explorar cada condição neurodivergente. Cada pessoa é única e possui suas próprias características, pontos fortes e desafios.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Feito com ❤️ para promover compreensão e inclusão</p>
+    </footer>
+
+    <script>
+        // Banco de dados completo - CORRIGIDO
+        const dados = {
+            tdah: {
+                titulo: "TDAH - Transtorno de Déficit de Atenção e Hiperatividade",
+                texto: `O TDAH é uma condição neurológica caracterizada por padrões persistentes de desatenção, hiperatividade e impulsividade que interferem no funcionamento diário. É importante destacar que o TDAH não é simplesmente "falta de atenção" ou "falta de força de vontade" — é uma diferença real na forma como o cérebro processa informações e regula a atenção.
+
+                <br><br><strong>Principais características:</strong><br>
+                - <strong>Desatenção:</strong> Dificuldade em manter o foco em tarefas, principalmente as que parecem repetitivas ou pouco interessantes. Frequentemente cometem erros por descuido em trabalhos escolares ou profissionais.<br>
+                - <strong>Hiperatividade:</strong> Sensação constante de inquietude, dificuldade em permanecer sentado por muito tempo, falar excessivamente.<br>
+                - <strong>Impulsividade:</strong> Dificuldade em esperar a vez, tomar decisões precipitadas, interromper os outros frequentemente.<br><br>
+                
+                <strong>Pontos fortes frequentemente associados:</strong><br>
+                ✓ Criatividade elevada e pensamento divergente<br>
+                ✓ Capacidade de hiperfoco em atividades prazerosas<br>
+                ✓ Alta energia e disposição para novas experiências<br>
+                ✓ Pensamento rápido e capacidade de multitasking (em situações de interesse)<br>
+                ✓ Resiliência e capacidade de adaptação`
+            },
+            autismo: {
+                titulo: "TEA - Transtorno do Espectro Autista",
+                texto: `O Transtorno do Espectro Autista é uma condição de desenvolvimento neurológico que afeta a comunicação, o comportamento e a interação social. O termo "espectro" é fundamental: significa que o autismo se manifesta de formas muito diversas de pessoa para pessoa, variando de leves a graves.
+
+                <br><br><strong>Principais características:</strong><br>
+                - <strong>Comunicação:</strong> Dificuldades em entender linguagem não-verbal (tom de voz, expressões faciais), interpretação literal de figuras de linguagem, dificuldade em iniciar ou manter conversas.<br>
+                - <strong>Interação social:</strong> Pode haver dificuldade em fazer amigos, menor compreensão de normas sociais implícitas, preferência por atividades solitárias ou rotineiras.<br>
+                - <strong>Comportamentos repetitivos:</strong> Movimentos repetitivos (stimming), insistência em rotinas fixas, interesses intensos e restritos em temas específicos.<br><br>
+                
+                <strong>Pontos fortes frequentemente associados:</strong><br>
+                ✓ Capacidade de atenção aos detalhes e percepção sensorial aguçada<br>
+                ✓ Alto conhecimento em áreas de interesse específico<br>
+                ✓ Pensamento lógico e sistemático<br>
+                ✓ Honestidade e sinceridade<br>
+                ✓ Memória excepcional para fatos e detalhes`
+            },
+            dislexia: {
+                titulo: "Dislexia - Distúrbio Específico de Aprendizagem",
+                texto: `A dislexia é um distúrbio de aprendizagem de origem neurológica que afeta a capacidade de ler, escrever e soletrar. Não está relacionada à inteligência — pessoas com dislexia frequentemente têm QI normal ou acima da média. É a forma mais comum de dificuldade de aprendizagem, afetando cerca de 15-20% da população mundial.
+
+                <br><br><strong>Principais características:</strong><br>
+                - <strong>Leitura:</strong> Dificuldade em identificar sons e letras, confusão entre letras semelhantes (b/d, p/q), leitura lenta e truncada, necessidade de reler frases.<br>
+                - <strong>Escrita:</strong> Dificuldades com ortografia, grafia irregular, inversão de letras e sílabas, dificuldade em organizar ideias por escrito.<br>
+                - <strong>Processamento:</strong> Podem ter dificuldade em processar informações rapidamente, problemas de memória de trabalho.<br><br>
+                
+                <strong>Pontos fortes frequentemente associados:</strong><br>
+                ✓ Pensamento tridimensional e espacial privilegiado<br>
+                ✓ Criatividade artística e pensamento divergente<br>
+                ✓ Capacidade de resolver problemas de formas inusitadas<br>
+                ✓ Forte intuição e pensamento holístico<br>
+                ✓ Habilidades em áreas como música, engenharia, design e empreendedorismo`
+            },
+            discalculia: {
+                titulo: "Discalculia - Dificuldade de Aprendizagem em Matemática",
+                texto: `A discalculia é um transtorno de aprendizagem específico que afeta a capacidade de compreender números e realizar cálculos matemáticos. Assim como a dislexia afeta a leitura, a discalculia afeta o processamento numérico. É uma condição vitalícia, mas com as estratégias certas, pessoas com discalculia podem ter sucesso acadêmico e profissional.
+
+                <br><br><strong>Principais características:</strong><br>
+                - <strong>Cálculo:</strong> Dificuldade em fazer operações matemáticas mentalmente, confusão com sinais (+, -, ×, ÷), dificuldade em estimar quantidades.<br>
+                - <strong>Números:</strong> Problemas em ler e escrever números, dificuldade em reconhecer padrões numéricos, esquecer sequências (como a tabuada).<br>
+                - <strong>Espacial:</strong> Dificuldade em entender conceitos como maior/menor, proximidade, direção.<br><br>
+                
+                <strong>Pontos fortes frequentemente associados:</strong><br>
+                ✓ Pensamento criativo e fora da caixa<br>
+                ✓ Excelentes em áreas que não dependem de matemática formal<br>
+                ✓ Habilidades linguísticas e comunicativas<br>
+                ✓ Pensamento filosófico e conceitual<br>
+                ✓ Empatia e inteligência emocional`
+            },
+            spd: {
+                titulo: "TPS - Transtorno de Processamento Sensorial",
+                texto: `O Transtorno de Processamento Sensorial (ou Diferença de Processamento Sensorial) ocorre quando o cérebro tem dificuldade em receber e responder a informações sensoriais. Isso significa que os sentidos (audição, visão, tato, olfato, paladar) e o senso de movimento (sistema vestibular) e posição corporal (propriocepção) são processados de forma diferente.
+
+                <br><br><strong>Tipos de TPS:</strong><br>
+                - <strong>Modulação sensorial:</strong> Dificuldade em regular a resposta a estímulos sensoriais. Pode ser hiporresponsivo (pouca reação) ou hiperresponsivo (reação excessiva).<br>
+                - <strong>Discriminação sensorial:</strong> Dificuldade em perceber diferenças entre estímulos (ex: não perceber que algo está molhado ou quente).<br>
+                - <strong>Base motora sensorial:</strong> Dificuldades com equilíbrio e coordenação motora.<br><br>
+                
+                <strong>Pontos fortes frequentemente associados:</strong><br>
+                ✓ Alta sensibilidade artística e estética<br>
+                ✓ Percepção de detalhes que outros não notam<br>
+                ✓ Intuição aguçada e empatia<br>
+                ✓ Criatividade e imaginação<br>
+                ✓ Capacidade de notar padrões sutis`
+            }
+        };
+
+        // Função para mostrar informações - CORRIGIDA
+        function mostrarInfo(tipo) {
+            const titulo = document.getElementById('content-title');
+            const texto = document.getElementById('content-text');
+            
+            // Verifica se o tipo existe nos dados
+            if (dados[tipo]) {
+                titulo.innerText = dados[tipo].titulo;
+                texto.innerHTML = dados[tipo].texto;
+            } else {
+                console.log('Tipo não encontrado:', tipo);
+            }
+        }
+    </script>
+</body>
+</html>
